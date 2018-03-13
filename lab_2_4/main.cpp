@@ -34,24 +34,45 @@ int main() {
     delete[] B;
 
     for (int i = 0; i < m; i++) {
-
+        cout<<result[i]<<' ';
     }
     delete[] result;
 
     return 0;
 }
 
-void indexSearch(const int* A, int n, const int* B, int m, int* result) {
-    int maxBIndex = n;
-    for (int k = n-1; k >= 0; k--) {
-        if (maxB <= B[k]) {
-            maxBIndex = k;
-            maxB = B[k];
+int indexNearestValue(const int* array, int size, int value) {
+    int average_index = 0;
+    int first_index   = 0;
+    int last_index = size -1;
+
+    while (first_index < last_index)
+    {
+        average_index = first_index + (last_index - first_index) / 2;
+        if (value <= array[average_index]) {
+            last_index = average_index;
         }
-        if (max <= A[k] + maxB) {
-            max = A[k] + maxB;
-            i = k;
-            j = maxBIndex;
+        else {
+            first_index = average_index + 1;
+        }
+    }
+    return last_index;
+}
+
+void indexSearch(const int* A, int n, const int* B, int m, int* result) {
+    int indexBuf = 0;
+    for (int i = 0; i < m; i++) {
+        indexBuf = indexNearestValue(A, n, B[i]);
+        if (indexBuf > 0){
+            if (B[i] - A[indexBuf-1] <= A[indexBuf] - B[i]) {
+                result[i] = indexBuf - 1;
+            }
+            else {
+                result[i] = indexBuf;
+            }
+        }
+        else {
+            result[i] = indexBuf;
         }
     }
 }
