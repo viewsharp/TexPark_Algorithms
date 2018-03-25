@@ -12,9 +12,7 @@ public:
     Stack(): dataSize(0),
              capacity(4),
              data(new T[4])
-    {
-
-    }
+    {}
 
     ~Stack() {
         delete [] data;
@@ -31,24 +29,24 @@ public:
 
     void push(T value) {
         if (dataSize == capacity) {
-            this->redataSize();
+            this->resize();
         }
 
         data[dataSize] = value;
         dataSize++;
     }
 
-    bool empty() {
+    bool empty() const {
         return dataSize == 0;
     }
 
-    unsigned int size() {
+    unsigned int size() const {
         return dataSize;
     }
 
 private:
 
-    void redataSize() {
+    void resize() {
         T* buf = new T[capacity*2];
         for (int i = 0; i < capacity; i++) {
             buf[i] = data[i];

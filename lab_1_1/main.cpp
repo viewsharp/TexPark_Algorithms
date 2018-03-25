@@ -9,20 +9,20 @@
 
 using namespace std;
 
-void indexSearch(const int* A,const int* B, int n, int& i, int &j);
+void indexSearch(const int *A, const int *B, int n, int &i, int &j);
 
 int main() {
     int n = 0;
     cin >> n;
 
-    int* A = new int[n];
+    int *A = new int[n];
     for (int i = 0; i < n; i++) {
-        cin>>A[i];
+        cin >> A[i];
     }
 
-    int* B = new int[n];
+    int *B = new int[n];
     for (int i = 0; i < n; i++) {
-        cin>>B[i];
+        cin >> B[i];
     }
 
     int i = 0;
@@ -33,16 +33,16 @@ int main() {
     delete[] A;
     delete[] B;
 
-    cout<<i<<' '<<j<<endl;
+    cout << i << ' ' << j << endl;
 
     return 0;
 }
 
-void indexSearch(const int* A,const int* B, int n, int& i, int& j) {
+void indexSearch(const int *A, const int *B, int n, int &i, int &j) {
     int max = INT_MIN;
     int maxB = INT_MIN;
     int maxBIndex = n;
-    for (int k = n-1; k >= 0; k--) {
+    for (int k = n - 1; k >= 0; k--) {
         if (maxB <= B[k]) {
             maxBIndex = k;
             maxB = B[k];
