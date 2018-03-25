@@ -34,8 +34,3 @@ int main() {
     cout << *kStat(array, n, k) << endl;
     delete[] array;
 }
-
-
-
-
-

@@ -41,7 +41,7 @@ template<class T>
 T *pivot(T *begin, T *end) {
     long size = end - begin;
 
-    if (size <= 2) {
+    if (size < 3) {
         return begin;
     } else if (size < 6) {
         return threeMedian(begin);
@@ -55,7 +55,14 @@ T *pivot(T *begin, T *end) {
     }
 
     // median position in 'threeMedians' array
-    unsigned long index = kStat(threeMedians, threeCount, (unsigned int) (threeCount / 2)) - threeMedians;
+    unsigned long index = 0;
+
+    if (threeCount > 5) {
+        index = kStat(threeMedians, threeCount, (unsigned int) (threeCount / 2)) - threeMedians;
+    } else if (threeCount > 2) {
+        index = threeMedian(threeMedians) - threeMedians;
+    } // else index = 0;
+
     delete[] threeMedians;
 
     return begin + 2 * index + 1;
@@ -64,9 +71,9 @@ T *pivot(T *begin, T *end) {
 template<class T>
 T *partition(T *begin, T *end) {
     assert(end - begin > 0);
-
-    if (end - begin == 1)
-        return begin;
+//
+//    if (end - begin == 1)
+//        return begin;
 
     swap(*pivot(begin, end), *(end - 1)); // put pivot on the last position
 
@@ -77,13 +84,17 @@ T *partition(T *begin, T *end) {
     for (; *j < *pvt; j++) {}
     while (true) { // while j != pvt
         for (; *pvt < *j; j++) {}
-        for (; *i < *pvt; i++) {}
+        for (; *i <= *pvt and i < pvt; i++) {}
 
         if (j == pvt) {
             break;
         }
 
-        swap(*i, *j);
+        if (i < j) {
+            swap(*i, *j);
+        } else {
+            j = i;
+        }
     }
 
     swap(*i, *pvt);
