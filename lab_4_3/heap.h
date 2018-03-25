@@ -81,7 +81,7 @@ private:
     }
 
     void siftDown(int index) {
-        while(true) {
+        while (true) {
             int left = 2 * index + 1;
             int right = 2 * index + 2;
 
@@ -93,18 +93,19 @@ private:
                 largest = right;
 
             // Если больший сын есть, то проталкиваем корень в него.
-            if (largest != index) {
-                std::swap(data[index], data[largest]);
-            } else {
+            if (largest == index) {
                 break;
             }
+
+            std::swap(data[index], data[largest]);
+            index = largest;
         }
     }
 
     void siftUp(int index) {
         while (index > 0) {
             int parent = (index - 1) / 2;
-            if (not (data[parent] < data[index]))
+            if (not(data[parent] < data[index]))
                 return;
             std::swap(data[index], data[parent]);
             index = parent;

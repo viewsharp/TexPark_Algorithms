@@ -36,18 +36,6 @@ const bool operator<(const Train first, const Train second) {
     return first.output > second.output;
 }
 
-//const bool operator>(const Train first, const Train second) {
-//    return first.output < second.output;
-//}
-//
-//const bool operator==(const Train first, const Train second) {
-//    return first.output == second.output;
-//}
-//
-//const bool operator<=(const Train first, const Train second) {
-//    return not(first > second);
-//}
-
 int minEndCount(Train *values, int n);
 
 int main() {
