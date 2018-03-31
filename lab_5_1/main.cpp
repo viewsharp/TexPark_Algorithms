@@ -18,8 +18,10 @@
 
 using namespace std;
 
+unsigned int advCount(Point * points, unsigned int size);
+
 int main() {
-    int n = 0;
+    unsigned int n = 0;
     cin >> n;
 
     Point *points = new Point[n];
@@ -32,13 +34,21 @@ int main() {
         points[i] = Point(begin, end);
     }
 
-    mergeSort(points, points + n);
+    cout << advCount(points, n);
 
-    int count = 2;
+    delete[] points;
+
+    return 0;
+}
+
+unsigned int advCount(Point * points, unsigned int size) {
+    mergeSort(points, points + size);
+
+    unsigned int count = 2;
     int exEnd1 = points[0].end - 1;
     int exEnd2 = points[0].end;
 
-    for (int i = 1; i < n; i++) {
+    for (int i = 1; i < size; i++) {
         if (points[i].begin > exEnd1) {
             if (points[i].begin > exEnd2) {
                 count += 2;
@@ -55,10 +65,5 @@ int main() {
             }
         }
     }
-
-    delete[] points;
-
-    cout << count;
-
-    return 0;
+    return count;
 }
