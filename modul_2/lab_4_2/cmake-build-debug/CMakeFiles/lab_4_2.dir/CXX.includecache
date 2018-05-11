@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_4_2/Tree.cpp
+Tree.h
+/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_4_2/Tree.h
+
+/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_4_2/Tree.h
+queue
+-
+utility
+-
+cassert
+-
+
+/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_4_2/main.cpp
+iostream
+-
+Tree.h
+/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_4_2/Tree.h
+

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/lab_4_2.dir/main.cpp.o CMakeFiles/lab_4_2.dir/Tree.cpp.o  -o lab_4_2 
