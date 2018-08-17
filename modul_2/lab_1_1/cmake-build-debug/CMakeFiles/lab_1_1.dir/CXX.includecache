@@ -6,33 +6,37 @@
 
 #IncludeRegexTransform: 
 
-/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_1_1/hash.cpp
-hash.h
-/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_1_1/hash.h
-
-/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_1_1/hash.h
+/home/views/github/TexPark_Algorithms/modul_2/lab_1_1/Hash.h
 string
 -
 
-/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_1_1/main.cpp
+/home/views/github/TexPark_Algorithms/modul_2/lab_1_1/HashTable.h
+stdexcept
+-
+algorithm
+-
+cassert
+-
+Hash.h
+/home/views/github/TexPark_Algorithms/modul_2/lab_1_1/Hash.h
+
+/home/views/github/TexPark_Algorithms/modul_2/lab_1_1/Set.h
+HashTable.h
+/home/views/github/TexPark_Algorithms/modul_2/lab_1_1/HashTable.h
+
+/home/views/github/TexPark_Algorithms/modul_2/lab_1_1/main.cpp
 iostream
 -
 string
 -
 cassert
 -
-stringset.h
-/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_1_1/stringset.h
-
-/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_1_1/stringset.cpp
-stringset.h
-/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_1_1/stringset.h
-
-/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_1_1/stringset.h
-exception
+set
 -
-string
+unordered_map
 -
-hash.h
-/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_1_1/hash.h
+HashTable.h
+/home/views/github/TexPark_Algorithms/modul_2/lab_1_1/HashTable.h
+Set.h
+/home/views/github/TexPark_Algorithms/modul_2/lab_1_1/Set.h
 

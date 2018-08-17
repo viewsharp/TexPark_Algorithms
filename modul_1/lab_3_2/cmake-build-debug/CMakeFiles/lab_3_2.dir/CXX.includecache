@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/views/github/TexPark_Algorithms/modul_1/lab_3_2/Deque.h
+stdexcept
+-
+
+/home/views/github/TexPark_Algorithms/modul_1/lab_3_2/main.cpp
+iostream
+-
+Deque.h
+/home/views/github/TexPark_Algorithms/modul_1/lab_3_2/Deque.h
+

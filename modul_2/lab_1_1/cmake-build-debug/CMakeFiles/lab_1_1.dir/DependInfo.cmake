@@ -4,9 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_1_1/hash.cpp" "/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_1_1/cmake-build-debug/CMakeFiles/lab_1_1.dir/hash.cpp.o"
-  "/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_1_1/main.cpp" "/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_1_1/cmake-build-debug/CMakeFiles/lab_1_1.dir/main.cpp.o"
-  "/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_1_1/stringset.cpp" "/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_1_1/cmake-build-debug/CMakeFiles/lab_1_1.dir/stringset.cpp.o"
+  "/home/views/github/TexPark_Algorithms/modul_2/lab_1_1/main.cpp" "/home/views/github/TexPark_Algorithms/modul_2/lab_1_1/cmake-build-debug/CMakeFiles/lab_1_1.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

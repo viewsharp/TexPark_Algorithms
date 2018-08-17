@@ -1,0 +1,4 @@
+/snap/clion/35/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/views/github/TexPark_Algorithms/modul_1/lab_3_2
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/views/github/TexPark_Algorithms/modul_1/lab_3_2/cmake-build-debug

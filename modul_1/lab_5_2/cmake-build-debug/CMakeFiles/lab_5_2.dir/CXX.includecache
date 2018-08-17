@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/views/github/TexPark_Algorithms/modul_1/lab_5_2/main.cpp
+iostream
+-
+mergeSort.h
+/home/views/github/TexPark_Algorithms/modul_1/lab_5_2/mergeSort.h
+
+/home/views/github/TexPark_Algorithms/modul_1/lab_5_2/mergeSort.h
+algorithm
+-
+

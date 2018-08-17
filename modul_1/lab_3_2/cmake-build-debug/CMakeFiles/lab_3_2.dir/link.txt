@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/lab_3_2.dir/main.cpp.o CMakeFiles/lab_3_2.dir/Deque.cpp.o  -o lab_3_2 
