@@ -1,3 +1,0 @@
-/home/views/github/TexPark_Algorithms/modul_2/lab_1_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/views/github/TexPark_Algorithms/modul_2/lab_1_1/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/views/github/TexPark_Algorithms/modul_2/lab_1_1/cmake-build-debug/CMakeFiles/lab_1_1.dir
