@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_2_4/Tree.cpp" "/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_2_4/cmake-build-debug/CMakeFiles/lab_2_4.dir/Tree.cpp.o"
-  "/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_2_4/main.cpp" "/home/viewsharp/GitHub/TexPark_Algorithms/modul_2/lab_2_4/cmake-build-debug/CMakeFiles/lab_2_4.dir/main.cpp.o"
+  "/home/views/github/TexPark_Algorithms/modul_2/lab_2_4/Tree.cpp" "/home/views/github/TexPark_Algorithms/modul_2/lab_2_4/cmake-build-debug/CMakeFiles/lab_2_4.dir/Tree.cpp.o"
+  "/home/views/github/TexPark_Algorithms/modul_2/lab_2_4/main.cpp" "/home/views/github/TexPark_Algorithms/modul_2/lab_2_4/cmake-build-debug/CMakeFiles/lab_2_4.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

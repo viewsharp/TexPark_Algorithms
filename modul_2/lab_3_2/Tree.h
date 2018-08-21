@@ -13,24 +13,9 @@ namespace tree {
 // Узел двоичного дерева
     template<class T>
     struct CNode {
-        explicit CNode(T &value) :
-                data(value),
-                left(nullptr),
-                right(nullptr),
-                parent(nullptr) {
-        }
-
-        CNode(T &value, CNode<T> *parent) :
-                data(value),
-                left(nullptr),
-                right(nullptr),
-                parent(parent) {
-        }
-
         T data;
-        CNode *left; // NULL, если нет.
-        CNode *right; // NULL, если нет.
-        CNode *parent; // NULL, если корень.
+        CNode *left{nullptr}; // NULL, если нет.
+        CNode *right{nullptr}; // NULL, если нет.
     };
 
 
@@ -64,18 +49,16 @@ namespace tree {
 
         void insert(T value) {
             CNode<T> **node = &root;
-            CNode<T> *lastNode = nullptr;
 
             while (*node) {
-                lastNode = *node;
                 if ((*node)->data > value) {
                     node = &(*node)->left;
                 } else {
                     node = &(*node)->right;
                 }
             }
-
-            *node = new CNode<T>(value, lastNode);
+            *node = new CNode<T>;
+            (*node)->data = value;
         }
 
         unsigned long width() {

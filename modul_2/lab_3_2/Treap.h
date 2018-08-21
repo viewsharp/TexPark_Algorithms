@@ -6,33 +6,17 @@
 #define LAB_2_4_TREAP_H
 
 #include <queue>
+#include <memory>
 
 namespace treap {
 
 // Узел двоичного дерева
     template<class T1, class T2>
     struct CNode {
-        CNode(T1 &key, T2 &priority) :
-                key(key),
-                priority(priority),
-                left(nullptr),
-                right(nullptr),
-                parent(nullptr) {
-        }
-
-        CNode(T1 &key, T2 &priority, CNode<T1, T2> *parent) :
-                key(key),
-                priority(priority),
-                left(nullptr),
-                right(nullptr),
-                parent(parent) {
-        }
-
         T1 key;
         T2 priority;
-        CNode *left; // NULL, если нет.
-        CNode *right; // NULL, если нет.
-        CNode *parent; // NULL, если корень.
+        CNode *left{nullptr}; // NULL, если нет.
+        CNode *right{nullptr}; // NULL, если нет.
     };
 
 
@@ -46,11 +30,11 @@ namespace treap {
             if (not root)
                 return;
 
-            std::queue<CNode<T1,T2> *> queue;
+            std::queue<CNode<T1, T2> *> queue;
             queue.push(root);
 
             while (!queue.empty()) {
-                CNode<T1,T2> *node = queue.front();
+                CNode<T1, T2> *node = queue.front();
                 queue.pop();
 
                 if (node->left) {
@@ -66,17 +50,19 @@ namespace treap {
 
         void insert(T1 key, T2 priority) {
 
+            auto autoPtr = std::make_unique<T1>();
+
             CNode<T1, T2> **node = &root;
-            CNode<T1, T2> *lastNode = nullptr;
 
             while (*node) {
-                lastNode = *node;
                 if ((*node)->priority < priority) {
                     CNode<T1, T2> *leftNode;
                     CNode<T1, T2> *rightNode;
                     split(*node, key, leftNode, rightNode);
 
-                    *node = new CNode<T1, T2>(key, priority, (*node)->parent);
+                    *node = new CNode<T1, T2>;
+                    (*node)->key = key;
+                    (*node)->priority = priority;
                     (*node)->left = leftNode;
                     (*node)->right = rightNode;
 
@@ -90,7 +76,9 @@ namespace treap {
                 }
             }
 
-            *node = new CNode<T1, T2>(key, priority, lastNode);
+            *node = new CNode<T1, T2>;
+            (*node)->key = key;
+            (*node)->priority = priority;
         }
 
         unsigned long width() {
@@ -98,13 +86,13 @@ namespace treap {
                 return 0;
 
             unsigned long result = 0;
-            std::queue<std::pair<int, CNode<T1,T2> *>> queue;
+            std::queue<std::pair<int, CNode<T1, T2> *>> queue;
             queue.push({1, root});
 
             int level = 0;
 
             while (!queue.empty()) {
-                CNode<T1,T2> *node = queue.front().second;
+                CNode<T1, T2> *node = queue.front().second;
                 if (level != queue.front().first) {
                     if (queue.size() > result) {
                         result = queue.size();
